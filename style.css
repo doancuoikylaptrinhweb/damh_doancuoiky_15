@@ -1,0 +1,17 @@
+.timkiem {
+  width: 75%;
+}
+@media (min-width: 992px) {
+  .timkiem {
+    width: auto;
+  }
+}
+
+.fame_tieude {
+  margin-inline: 200px;
+}
+@media (max-width: 992px) {
+  .fame_tieude {
+    margin: 0px;
+  }
+}
