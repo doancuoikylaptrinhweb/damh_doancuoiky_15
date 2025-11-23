@@ -10,6 +10,11 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="script.js" />
+    <link
+      href="https://cdn.boxicons.com/3.0.4/fonts/basic/boxicons.min.css"
+      rel="stylesheet"
+    />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
@@ -315,8 +320,393 @@
       </div>
     </div>
     <!-- ==============fame chính======================================================================================= -->
-    <div class="fame_tieude">
-      <h1 class="py-5 px-4">chưa có gì</h1>
+    <div class="fame_tieude mt-2">
+      <div class="bg-dark bg-gradient" style="height: 20px"></div>
+      <div
+        class="container-fluid p-0 d-block d-lg-flex justify-content-between"
+      >
+        <div class="sanpham-box flex-grow-1 bg-secondary">
+          <!-- chọn tất cả -->
+          <div
+            class="sanpham-title border d-flex justify-content-between border-black"
+          >
+            <label class="ms-2"
+              ><input
+                type="checkbox"
+                class="me-1"
+                style="
+                  transform: translateY(15%);
+                  accent-color: rgb(38, 235, 242);
+                "
+                ;
+              />
+              <p class="d-inline text-white">chọn tất cả(0)</p></label
+            >
+            <button class="btn btn-primary">xóa tất cả</button>
+          </div>
+          <!-- fame sản phẩm -->
+          <div
+            class="sanpham-list d-block d-lg-flex justify-content-between pt-0"
+          >
+            <!-- check -->
+            <div class="check d-flex justify-content-between mt-1 me-2">
+              <label class="d-flex align-items-center"
+                ><input type="checkbox" style="accent-color: rgb(19, 196, 255)"
+              /></label>
+              <button
+                class="btn d-lg-none p-0 px-3"
+                style="color: rgb(255, 255, 255)"
+              >
+                <i class="bxr bx-trash" style="transform: translateY(10%)"></i>
+              </button>
+            </div>
+            <!-- thong tin -->
+            <div class="sanpham my-1 d-flex flex-grow-1">
+              <div class="img-box flex-shrink-0">
+                <img src="./IMG/15.12.p1.link.png" alt="" />
+              </div>
+              <div class="d-flex flex-column ms-1" style="width: 100%">
+                <div class="m-0 p-0 lh-1 text-wrap">tên sản phẩm</div>
+                <div class="num-box mt-auto">
+                  <b>
+                    <p class="fs-5 m-0 p-0">giá</p>
+                  </b>
+                  <div class="num">
+                    <p class="d-inline m-0 p-0 font-monospace">Số Lượng:</p>
+                    <input
+                      type="number"
+                      min="0"
+                      value="0"
+                      style="width: 3rem"
+                      class="rounded-2 border border-2 border-primary-subtle"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex align-items-stretch">
+              <button class="d-none d-lg-block btn text-white p-1 my-2">
+                <i class="bxr bx-trash" style="transform: translateY(10%)"></i>
+              </button>
+            </div>
+          </div>
+          <hr class="text-white border border-2 border-white m-0" />
+          <div
+            class="sanpham-list d-block d-lg-flex justify-content-between pt-0"
+          >
+            <!-- check -->
+            <div class="check d-flex justify-content-between mt-1 me-2">
+              <label class="d-flex align-items-center"
+                ><input type="checkbox" style="accent-color: rgb(19, 196, 255)"
+              /></label>
+              <button
+                class="btn d-lg-none p-0 px-3"
+                style="color: rgb(255, 255, 255)"
+              >
+                <i class="bxr bx-trash" style="transform: translateY(10%)"></i>
+              </button>
+            </div>
+            <!-- thong tin -->
+            <div class="sanpham my-1 d-flex flex-grow-1">
+              <div class="img-box flex-shrink-0">
+                <img src="./IMG/15.12.p1.link.png" alt="" />
+              </div>
+              <div class="d-flex flex-column ms-1" style="width: 100%">
+                <div class="m-0 p-0 lh-1 text-wrap">tên sản phẩm</div>
+                <div class="num-box mt-auto">
+                  <b>
+                    <p class="fs-5 m-0 p-0">giá</p>
+                  </b>
+                  <div class="num">
+                    <p class="d-inline m-0 p-0 font-monospace">Số Lượng:</p>
+                    <input
+                      type="number"
+                      min="0"
+                      value="0"
+                      style="width: 3rem"
+                      class="rounded-2 border border-2 border-primary-subtle"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex align-items-stretch">
+              <button class="d-none d-lg-block btn text-white p-1 my-2">
+                <i class="bxr bx-trash" style="transform: translateY(10%)"></i>
+              </button>
+            </div>
+          </div>
+          <hr class="text-white border border-2 border-white m-0" />
+          <div
+            class="sanpham-list d-block d-lg-flex justify-content-between pt-0"
+          >
+            <!-- check -->
+            <div class="check d-flex justify-content-between mt-1 me-2">
+              <label class="d-flex align-items-center"
+                ><input type="checkbox" style="accent-color: rgb(19, 196, 255)"
+              /></label>
+              <button
+                class="btn d-lg-none p-0 px-3"
+                style="color: rgb(255, 255, 255)"
+              >
+                <i class="bxr bx-trash" style="transform: translateY(10%)"></i>
+              </button>
+            </div>
+            <!-- thong tin -->
+            <div class="sanpham my-1 d-flex flex-grow-1">
+              <div class="img-box flex-shrink-0">
+                <img src="./IMG/15.12.p1.link.png" alt="" />
+              </div>
+              <div class="d-flex flex-column ms-1" style="width: 100%">
+                <div class="m-0 p-0 lh-1 text-wrap">tên sản phẩm</div>
+                <div class="num-box mt-auto">
+                  <b>
+                    <p class="fs-5 m-0 p-0">giá</p>
+                  </b>
+                  <div class="num">
+                    <p class="d-inline m-0 p-0 font-monospace">Số Lượng:</p>
+                    <input
+                      type="number"
+                      min="0"
+                      value="0"
+                      style="width: 3rem"
+                      class="rounded-2 border border-2 border-primary-subtle"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex align-items-stretch">
+              <button class="d-none d-lg-block btn text-white p-1 my-2">
+                <i class="bxr bx-trash" style="transform: translateY(10%)"></i>
+              </button>
+            </div>
+          </div>
+          <hr class="text-white border border-2 border-white m-0" />
+          <div
+            class="sanpham-list d-block d-lg-flex justify-content-between pt-0"
+          >
+            <!-- check -->
+            <div class="check d-flex justify-content-between mt-1 me-2">
+              <label class="d-flex align-items-center"
+                ><input type="checkbox" style="accent-color: rgb(19, 196, 255)"
+              /></label>
+              <button
+                class="btn d-lg-none p-0 px-3"
+                style="color: rgb(255, 255, 255)"
+              >
+                <i class="bxr bx-trash" style="transform: translateY(10%)"></i>
+              </button>
+            </div>
+            <!-- thong tin -->
+            <div class="sanpham my-1 d-flex flex-grow-1">
+              <div class="img-box flex-shrink-0">
+                <img src="./IMG/15.12.p1.link.png" alt="" />
+              </div>
+              <div class="d-flex flex-column ms-1" style="width: 100%">
+                <div class="m-0 p-0 lh-1 text-wrap">tên sản phẩm</div>
+                <div class="num-box mt-auto">
+                  <b>
+                    <p class="fs-5 m-0 p-0">giá</p>
+                  </b>
+                  <div class="num">
+                    <p class="d-inline m-0 p-0 font-monospace">Số Lượng:</p>
+                    <input
+                      type="number"
+                      min="0"
+                      value="0"
+                      style="width: 3rem"
+                      class="rounded-2 border border-2 border-primary-subtle"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex align-items-stretch">
+              <button class="d-none d-lg-block btn text-white p-1 my-2">
+                <i class="bxr bx-trash" style="transform: translateY(10%)"></i>
+              </button>
+            </div>
+          </div>
+          <hr class="text-white border border-2 border-white m-0" />
+          <div
+            class="sanpham-list d-block d-lg-flex justify-content-between pt-0"
+          >
+            <!-- check -->
+            <div class="check d-flex justify-content-between mt-1 me-2">
+              <label class="d-flex align-items-center"
+                ><input type="checkbox" style="accent-color: rgb(19, 196, 255)"
+              /></label>
+              <button
+                class="btn d-lg-none p-0 px-3"
+                style="color: rgb(255, 255, 255)"
+              >
+                <i class="bxr bx-trash" style="transform: translateY(10%)"></i>
+              </button>
+            </div>
+            <!-- thong tin -->
+            <div class="sanpham my-1 d-flex flex-grow-1">
+              <div class="img-box flex-shrink-0">
+                <img src="./IMG/15.12.p1.link.png" alt="" />
+              </div>
+              <div class="d-flex flex-column ms-1" style="width: 100%">
+                <div class="m-0 p-0 lh-1 text-wrap">tên sản phẩm</div>
+                <div class="num-box mt-auto">
+                  <b>
+                    <p class="fs-5 m-0 p-0">giá</p>
+                  </b>
+                  <div class="num">
+                    <p class="d-inline m-0 p-0 font-monospace">Số Lượng:</p>
+                    <input
+                      type="number"
+                      min="0"
+                      value="0"
+                      style="width: 3rem"
+                      class="rounded-2 border border-2 border-primary-subtle"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex align-items-stretch">
+              <button class="d-none d-lg-block btn text-white p-1 my-2">
+                <i class="bxr bx-trash" style="transform: translateY(10%)"></i>
+              </button>
+            </div>
+          </div>
+          <hr class="text-white border border-2 border-white m-0" />
+          <div
+            class="sanpham-list d-block d-lg-flex justify-content-between pt-0"
+          >
+            <!-- check -->
+            <div class="check d-flex justify-content-between mt-1 me-2">
+              <label class="d-flex align-items-center"
+                ><input type="checkbox" style="accent-color: rgb(19, 196, 255)"
+              /></label>
+              <button
+                class="btn d-lg-none p-0 px-3"
+                style="color: rgb(255, 255, 255)"
+              >
+                <i class="bxr bx-trash" style="transform: translateY(10%)"></i>
+              </button>
+            </div>
+            <!-- thong tin -->
+            <div class="sanpham my-1 d-flex flex-grow-1">
+              <div class="img-box flex-shrink-0">
+                <img src="./IMG/15.12.p1.link.png" alt="" />
+              </div>
+              <div class="d-flex flex-column ms-1" style="width: 100%">
+                <div class="m-0 p-0 lh-1 text-wrap">tên sản phẩm</div>
+                <div class="num-box mt-auto">
+                  <b>
+                    <p class="fs-5 m-0 p-0">giá</p>
+                  </b>
+                  <div class="num">
+                    <p class="d-inline m-0 p-0 font-monospace">Số Lượng:</p>
+                    <input
+                      type="number"
+                      min="0"
+                      value="0"
+                      style="width: 3rem"
+                      class="rounded-2 border border-2 border-primary-subtle"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex align-items-stretch">
+              <button class="d-none d-lg-block btn text-white p-1 my-2">
+                <i class="bxr bx-trash" style="transform: translateY(10%)"></i>
+              </button>
+            </div>
+          </div>
+          <hr class="text-white border border-2 border-white m-0" />
+          <div
+            class="sanpham-list d-block d-lg-flex justify-content-between pt-0"
+          >
+            <!-- check -->
+            <div class="check d-flex justify-content-between mt-1 me-2">
+              <label class="d-flex align-items-center"
+                ><input type="checkbox" style="accent-color: rgb(19, 196, 255)"
+              /></label>
+              <button
+                class="btn d-lg-none p-0 px-3"
+                style="color: rgb(255, 255, 255)"
+              >
+                <i class="bxr bx-trash" style="transform: translateY(10%)"></i>
+              </button>
+            </div>
+            <!-- thong tin -->
+            <div class="sanpham my-1 d-flex flex-grow-1">
+              <div class="img-box flex-shrink-0">
+                <img src="./IMG/15.12.p1.link.png" alt="" />
+              </div>
+              <div class="d-flex flex-column ms-1" style="width: 100%">
+                <div class="m-0 p-0 lh-1 text-wrap">tên sản phẩm</div>
+                <div class="num-box mt-auto">
+                  <b>
+                    <p class="fs-5 m-0 p-0">giá</p>
+                  </b>
+                  <div class="num">
+                    <p class="d-inline m-0 p-0 font-monospace">Số Lượng:</p>
+                    <input
+                      type="number"
+                      min="0"
+                      value="0"
+                      style="width: 3rem"
+                      class="rounded-2 border border-2 border-primary-subtle"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex align-items-stretch">
+              <button class="d-none d-lg-block btn text-white p-1 my-2">
+                <i class="bxr bx-trash" style="transform: translateY(10%)"></i>
+              </button>
+            </div>
+          </div>
+          <hr class="text-white border border-2 border-white m-0" />
+        </div>
+        <!-- thanh toán -->
+        <div
+          class="thanhtoan flex-wrap d-flex flex-column align-items-lg-stretch"
+        >
+          <div class="bg-dark bg-gradient d-lg-none" style="height: 20px"></div>
+          <div class="map bg-primary-subtle p-2">
+            <div class="w-100">
+              <div
+                class="btn btn-outline-light border border-secondary text-center w-100 bg-secondary"
+              >
+                <a href="#" class="text-decoration-none text-white">
+                  đổi địa chỉ
+                  <i
+                    class="bxr bx-location"
+                    style="transform: translateY(10%)"
+                  ></i>
+                </a>
+              </div>
+            </div>
+            <div class="text-center border border-secondary rounded-3 mt-2">
+              <i class="bxr bx-location" style="transform: translateY(10%)"></i>
+              <p class="d-inline">xã Đức Tùng, huyện Đức Thọ, tỉnh Hà Tĩnh</p>
+            </div>
+            <hr />
+            <div class="border border-secondary rounded-3">
+              <div class="d-flex justify-content-between px-3 py-3">
+                <p class="m-0 p-0">thành tiền</p>
+                <p class="m-0 p-0">0 đ</p>
+              </div>
+            </div>
+            <div class="w-100 mt-2">
+              <button class="btn btn-primary w-100 text-uppercase">
+                Đặt Hàng(0)
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-dark bg-gradient" style="height: 20px"></div>
     </div>
     <!-- ==============ketnoi======================================================================================= -->
     <div class="fame_ket mt-2 bg-dark-subtle d-block d-lg-flex">
