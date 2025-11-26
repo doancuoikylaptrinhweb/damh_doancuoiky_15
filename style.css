@@ -165,3 +165,44 @@
     width: 20%;
   }
 }
+
+.the-item {
+  overflow: hidden;
+  outline: none;
+  transition: box-shadow 0.1s ease, background-color 0.5s ease;
+}
+
+.the-item:hover {
+  box-shadow: 0 0 10px 3px rgb(75, 234, 255);
+  background-color: rgb(230, 230, 230);
+}
+.the-item img {
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  transform-origin: center;
+}
+
+.the-item:hover img {
+  transform: scale(1.2);
+}
+
+.danhmuc-item {
+  border-bottom: 1px solid rgb(204, 204, 204);
+  transition: border 0.1s ease;
+}
+
+.danhmuc-item-active {
+  background-color: rgb(142, 142, 142);
+  border: none;
+  border-radius: 5px 0px 0px 5px;
+  border-left: 4px solid rgb(73, 73, 73);
+}
+.danhmuc-item:hover {
+  background-color: rgb(188, 188, 188);
+  border: none;
+  border-left: 4px solid rgb(73, 73, 73);
+}
+.danhmuc-tieude {
+  border-radius: 5px 5px 0px 0px;
+}
