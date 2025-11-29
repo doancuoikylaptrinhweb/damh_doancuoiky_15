@@ -65,7 +65,7 @@
 }
 .input-box i {
   position: absolute;
-  right: 20px;
+  right: 11px;
   top: 50%;
   transform: translateY(-50%);
   font-size: 20px;
@@ -104,6 +104,7 @@
   appearance: none;
   color: rgb(131, 131, 131);
 }
+
 .input-select select option {
   border: none;
   outline: none;
@@ -217,6 +218,13 @@
   width: 100%;
 }
 
+.w-if-40 {
+  width: 100%;
+}
+.w-if-60 {
+  width: 100%;
+}
+
 .w-40-50 {
   width: 40%;
 }
@@ -255,6 +263,12 @@
   .bg-if-se {
     background-color: rgb(41, 41, 41);
   }
+  .w-if-40 {
+    width: 40%;
+  }
+  .w-if-60 {
+    width: 60%;
+  }
 }
 
 .img-item {
@@ -274,4 +288,15 @@
 }
 .text-p-light-dark {
   color: rgb(131, 131, 131);
+}
+
+.p-if {
+  padding: 10px;
+}
+@media (min-width: 992px) {
+  .p-if {
+    padding-inline: 100px;
+    padding-block: 40px;
+    padding-bottom: 20px;
+  }
 }
