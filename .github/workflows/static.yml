@@ -38,7 +38,7 @@ jobs:
         with:
           # Upload entire repository
           path:
-            - "./HTML/index.html"
+            - "./HTML"
             - "./IMG"
             - "./CSS"
       - name: Deploy to GitHub Pages
