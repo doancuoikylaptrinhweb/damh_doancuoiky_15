@@ -34,7 +34,9 @@
 
 @media (min-width: 992px) {
   .sub {
-    margin-inline: 450px;
+    min-width: 300px;
+    max-width: 300px;
+    margin-inline: auto;
   }
 }
 
