@@ -192,6 +192,8 @@
 }
 
 .danhmuc-item {
+  display: flex;
+  flex-grow: 1;
   border-bottom: 1px solid rgb(204, 204, 204);
   transition: border 0.1s ease;
 }
@@ -210,7 +212,13 @@
 .danhmuc-tieude {
   border-radius: 5px 5px 0px 0px;
 }
-
+.danhmuc-link {
+  display: flex;
+  flex-grow: 1;
+}
+.danhmuc-link a {
+  width: 100%;
+}
 .w-if-70 {
   width: 100%;
 }
@@ -309,4 +317,11 @@
   .offcanvas-start {
     width: 400px !important;
   }
+}
+
+.hover-bg {
+  transition: background-color 300ms ease;
+}
+.hover-bg:hover {
+  background-color: rgb(255, 255, 255, 0.07);
 }
