@@ -130,18 +130,13 @@
   border: 1px solid rgb(177, 177, 177);
 }
 .sanpham-title {
-  background-color: rgb(56, 56, 56);
+  background-color: rgb(32, 32, 32);
 }
 .sanpham-title button {
   border: none;
   outline: none;
-  border: 1.7px solid;
-  border-radius: 8px;
-  border-color: rgb(40, 237, 255);
-  background-color: rgb(76, 76, 76);
-  padding: 0px 3px;
-  color: rgb(40, 237, 255);
-  margin-block: 3px;
+  margin: none;
+  color: white;
   margin-inline: 5px;
 }
 
