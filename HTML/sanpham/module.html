@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -157,7 +157,7 @@
               </a>
             </li>
             <!-- item6 -->
-              <li class="nav-item">
+            <li class="nav-item">
               <a class="nav-link" href="../giohang.html">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -299,7 +299,6 @@
                 d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"
               ></path>
             </svg>
-           
           </a>
           <a
             onclick="showcart()"
@@ -307,33 +306,39 @@
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="25"
-              height="25"
+              width="16"
+              height="16"
               fill="currentColor"
-              class="bi bi-cart"
+              class="bi bi-bag-check"
               viewBox="0 0 16 16"
             >
               <path
-                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"
+                fill-rule="evenodd"
+                d="M10.854 8.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708 0"
+              />
+              <path
+                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"
               />
             </svg>
-            <span class="align-middle">Giỏ Hàng(<span id="countsp">0</span>)</span>
+            <span class="align-middle"
+              >Giỏ Hàng(<span id="countsp">0</span>)</span
+            >
           </a>
         </div>
-        <div class="showcart" id="showcart"><table>
-                        <tr>
-                            <th>STT</th>
-                            <th>Hình</th>
-                            <th>Tên sản phẩm</th>
-                            <th>Đơn giá</th>
-                            <th>Số lượng</th>
-                            <th>Thành tiền ($)</th>
-                        </tr>
-                        
-                        <tbody id="mycart">
+        <div class="showcart" id="showcart">
+          <table>
+            <tr>
+              <th>STT</th>
+              <th>Hình</th>
+              <th>Tên sản phẩm</th>
+              <th>Đơn giá</th>
+              <th>Số lượng</th>
+              <th>Thành tiền ($)</th>
+            </tr>
 
-                        </tbody>
-                    </table></div>
+            <tbody id="mycart"></tbody>
+          </table>
+        </div>
       </div>
     </nav>
     <!-- ==================đăng nhập================================================================ -->
@@ -471,10 +476,29 @@
                         Module phát hiện vật cản TCRT5000 (túi 10c)
                       </p>
                     </div>
-                    <div class="mt-auto border-top">
+                    <div
+                      class="mt-auto border-top d-flex flex-column justify-content-center"
+                    >
                       <h5 class="card-title lh-1 text-center">110,000 đ</h5>
-                      <input type="number" name="soluong" min="1" max="10" value="1">
-                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                      <div
+                        class="d-flex flex-column text-center align-items-center"
+                      >
+                        <input
+                          class="border-1 me-1 ps-1 border-black rounded-2"
+                          type="number"
+                          name="soluong"
+                          min="1"
+                          max="9"
+                          value="1"
+                          style="min-width: 40px; max-width: 60px"
+                        />
+                        <button
+                          class="btn btn-primary p-0 px-2 w-100 mt-1"
+                          onclick="themvaogiohang(this)"
+                        >
+                          Đặt Hàng
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -501,10 +525,29 @@
                         Module mở rộng giao tiếp I2C TCA9548A
                       </p>
                     </div>
-                    <div class="mt-auto border-top">
+                    <div
+                      class="mt-auto border-top d-flex flex-column justify-content-center"
+                    >
                       <h5 class="card-title lh-1 text-center">18,000 đ</h5>
-                      <input type="number" name="soluong" min="1" max="10" value="1">
-                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                      <div
+                        class="d-flex flex-column text-center align-items-center"
+                      >
+                        <input
+                          class="border-1 me-1 ps-1 border-black rounded-2"
+                          type="number"
+                          name="soluong"
+                          min="1"
+                          max="9"
+                          value="1"
+                          style="min-width: 40px; max-width: 60px"
+                        />
+                        <button
+                          class="btn btn-primary p-0 px-2 w-100 mt-1"
+                          onclick="themvaogiohang(this)"
+                        >
+                          Đặt Hàng
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -531,10 +574,29 @@
                         KIT STM32F103C8T6 Mini
                       </p>
                     </div>
-                    <div class="mt-auto border-top">
+                    <div
+                      class="mt-auto border-top d-flex flex-column justify-content-center"
+                    >
                       <h5 class="card-title lh-1 text-center">45,000 đ</h5>
-                      <input type="number" name="soluong" min="1" max="10" value="1">
-                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                      <div
+                        class="d-flex flex-column text-center align-items-center"
+                      >
+                        <input
+                          class="border-1 me-1 ps-1 border-black rounded-2"
+                          type="number"
+                          name="soluong"
+                          min="1"
+                          max="9"
+                          value="1"
+                          style="min-width: 40px; max-width: 60px"
+                        />
+                        <button
+                          class="btn btn-primary p-0 px-2 w-100 mt-1"
+                          onclick="themvaogiohang(this)"
+                        >
+                          Đặt Hàng
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -561,10 +623,29 @@
                         Module Bluetooth HC05 V02 Full chân cắm
                       </p>
                     </div>
-                    <div class="mt-auto border-top">
+                    <div
+                      class="mt-auto border-top d-flex flex-column justify-content-center"
+                    >
                       <h5 class="card-title lh-1 text-center">75,000 đ</h5>
-                      <input type="number" name="soluong" min="1" max="10" value="1">
-                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                      <div
+                        class="d-flex flex-column text-center align-items-center"
+                      >
+                        <input
+                          class="border-1 me-1 ps-1 border-black rounded-2"
+                          type="number"
+                          name="soluong"
+                          min="1"
+                          max="9"
+                          value="1"
+                          style="min-width: 40px; max-width: 60px"
+                        />
+                        <button
+                          class="btn btn-primary p-0 px-2 w-100 mt-1"
+                          onclick="themvaogiohang(this)"
+                        >
+                          Đặt Hàng
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -592,10 +673,29 @@
                         tốt)
                       </p>
                     </div>
-                    <div class="mt-auto border-top">
+                    <div
+                      class="mt-auto border-top d-flex flex-column justify-content-center"
+                    >
                       <h5 class="card-title lh-1 text-center">206,000 đ</h5>
-                      <input type="number" name="soluong" min="1" max="10" value="1">
-                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                      <div
+                        class="d-flex flex-column text-center align-items-center"
+                      >
+                        <input
+                          class="border-1 me-1 ps-1 border-black rounded-2"
+                          type="number"
+                          name="soluong"
+                          min="1"
+                          max="9"
+                          value="1"
+                          style="min-width: 40px; max-width: 60px"
+                        />
+                        <button
+                          class="btn btn-primary p-0 px-2 w-100 mt-1"
+                          onclick="themvaogiohang(this)"
+                        >
+                          Đặt Hàng
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -622,10 +722,29 @@
                         Module điều khiển động cơ DC 6V-90V 20A vỏ nhôm
                       </p>
                     </div>
-                    <div class="mt-auto border-top">
+                    <div
+                      class="mt-auto border-top d-flex flex-column justify-content-center"
+                    >
                       <h5 class="card-title lh-1 text-center">74,000 đ</h5>
-                      <input type="number" name="soluong" min="1" max="10" value="1">
-                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                      <div
+                        class="d-flex flex-column text-center align-items-center"
+                      >
+                        <input
+                          class="border-1 me-1 ps-1 border-black rounded-2"
+                          type="number"
+                          name="soluong"
+                          min="1"
+                          max="9"
+                          value="1"
+                          style="min-width: 40px; max-width: 60px"
+                        />
+                        <button
+                          class="btn btn-primary p-0 px-2 w-100 mt-1"
+                          onclick="themvaogiohang(this)"
+                        >
+                          Đặt Hàng
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -652,10 +771,29 @@
                         Module bật tắt tự giữ thay thế công tắc cơ 12VDC
                       </p>
                     </div>
-                    <div class="mt-auto border-top">
+                    <div
+                      class="mt-auto border-top d-flex flex-column justify-content-center"
+                    >
                       <h5 class="card-title lh-1 text-center">34,000 đ</h5>
-                      <input type="number" name="soluong" min="1" max="10" value="1">
-                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                      <div
+                        class="d-flex flex-column text-center align-items-center"
+                      >
+                        <input
+                          class="border-1 me-1 ps-1 border-black rounded-2"
+                          type="number"
+                          name="soluong"
+                          min="1"
+                          max="9"
+                          value="1"
+                          style="min-width: 40px; max-width: 60px"
+                        />
+                        <button
+                          class="btn btn-primary p-0 px-2 w-100 mt-1"
+                          onclick="themvaogiohang(this)"
+                        >
+                          Đặt Hàng
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -682,10 +820,29 @@
                         Cảm biến nồng độ khí Formaldehyd ZE08-CH2O
                       </p>
                     </div>
-                    <div class="mt-auto border-top">
+                    <div
+                      class="mt-auto border-top d-flex flex-column justify-content-center"
+                    >
                       <h5 class="card-title lh-1 text-center">195,000 đ</h5>
-                      <input type="number" name="soluong" min="1" max="10" value="1">
-                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                      <div
+                        class="d-flex flex-column text-center align-items-center"
+                      >
+                        <input
+                          class="border-1 me-1 ps-1 border-black rounded-2"
+                          type="number"
+                          name="soluong"
+                          min="1"
+                          max="9"
+                          value="1"
+                          style="min-width: 40px; max-width: 60px"
+                        />
+                        <button
+                          class="btn btn-primary p-0 px-2 w-100 mt-1"
+                          onclick="themvaogiohang(this)"
+                        >
+                          Đặt Hàng
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -712,10 +869,29 @@
                         Module điều khiển động cơ L9110S 4 kênh
                       </p>
                     </div>
-                    <div class="mt-auto border-top">
+                    <div
+                      class="mt-auto border-top d-flex flex-column justify-content-center"
+                    >
                       <h5 class="card-title lh-1 text-center">27,000 đ</h5>
-                      <input type="number" name="soluong" min="1" max="10" value="1">
-                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                      <div
+                        class="d-flex flex-column text-center align-items-center"
+                      >
+                        <input
+                          class="border-1 me-1 ps-1 border-black rounded-2"
+                          type="number"
+                          name="soluong"
+                          min="1"
+                          max="9"
+                          value="1"
+                          style="min-width: 40px; max-width: 60px"
+                        />
+                        <button
+                          class="btn btn-primary p-0 px-2 w-100 mt-1"
+                          onclick="themvaogiohang(this)"
+                        >
+                          Đặt Hàng
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -742,10 +918,29 @@
                         Module cảm biến chất lượng nước TDS Meter V1.0
                       </p>
                     </div>
-                    <div class="mt-auto border-top">
+                    <div
+                      class="mt-auto border-top d-flex flex-column justify-content-center"
+                    >
                       <h5 class="card-title lh-1 text-center">105,000 đ</h5>
-                      <input type="number" name="soluong" min="1" max="10" value="1">
-                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                      <div
+                        class="d-flex flex-column text-center align-items-center"
+                      >
+                        <input
+                          class="border-1 me-1 ps-1 border-black rounded-2"
+                          type="number"
+                          name="soluong"
+                          min="1"
+                          max="9"
+                          value="1"
+                          style="min-width: 40px; max-width: 60px"
+                        />
+                        <button
+                          class="btn btn-primary p-0 px-2 w-100 mt-1"
+                          onclick="themvaogiohang(this)"
+                        >
+                          Đặt Hàng
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -772,10 +967,29 @@
                         Module cảm biến chuyển động SR602
                       </p>
                     </div>
-                    <div class="mt-auto border-top">
+                    <div
+                      class="mt-auto border-top d-flex flex-column justify-content-center"
+                    >
                       <h5 class="card-title lh-1 text-center">19,000 đ</h5>
-                      <input type="number" name="soluong" min="1" max="10" value="1">
-                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                      <div
+                        class="d-flex flex-column text-center align-items-center"
+                      >
+                        <input
+                          class="border-1 me-1 ps-1 border-black rounded-2"
+                          type="number"
+                          name="soluong"
+                          min="1"
+                          max="9"
+                          value="1"
+                          style="min-width: 40px; max-width: 60px"
+                        />
+                        <button
+                          class="btn btn-primary p-0 px-2 w-100 mt-1"
+                          onclick="themvaogiohang(this)"
+                        >
+                          Đặt Hàng
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -802,10 +1016,29 @@
                         Module Relay 2 kênh 12V bán dẫn SSR kích mức cao
                       </p>
                     </div>
-                    <div class="mt-auto border-top">
+                    <div
+                      class="mt-auto border-top d-flex flex-column justify-content-center"
+                    >
                       <h5 class="card-title lh-1 text-center">48,000 đ</h5>
-                      <input type="number" name="soluong" min="1" max="10" value="1">
-                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                      <div
+                        class="d-flex flex-column text-center align-items-center"
+                      >
+                        <input
+                          class="border-1 me-1 ps-1 border-black rounded-2"
+                          type="number"
+                          name="soluong"
+                          min="1"
+                          max="9"
+                          value="1"
+                          style="min-width: 40px; max-width: 60px"
+                        />
+                        <button
+                          class="btn btn-primary p-0 px-2 w-100 mt-1"
+                          onclick="themvaogiohang(this)"
+                        >
+                          Đặt Hàng
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -832,10 +1065,29 @@
                         Mạch điều chỉnh điện áp 4A Hiển Thị LCD ZK-4KX
                       </p>
                     </div>
-                    <div class="mt-auto border-top">
+                    <div
+                      class="mt-auto border-top d-flex flex-column justify-content-center"
+                    >
                       <h5 class="card-title lh-1 text-center">187,000 đ</h5>
-                      <input type="number" name="soluong" min="1" max="10" value="1">
-                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                      <div
+                        class="d-flex flex-column text-center align-items-center"
+                      >
+                        <input
+                          class="border-1 me-1 ps-1 border-black rounded-2"
+                          type="number"
+                          name="soluong"
+                          min="1"
+                          max="9"
+                          value="1"
+                          style="min-width: 40px; max-width: 60px"
+                        />
+                        <button
+                          class="btn btn-primary p-0 px-2 w-100 mt-1"
+                          onclick="themvaogiohang(this)"
+                        >
+                          Đặt Hàng
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -862,10 +1114,29 @@
                         Module Relay 8 kênh 12V bán dẫn SSR kích mức thấp
                       </p>
                     </div>
-                    <div class="mt-auto border-top">
+                    <div
+                      class="mt-auto border-top d-flex flex-column justify-content-center"
+                    >
                       <h5 class="card-title lh-1 text-center">180,000 đ</h5>
-                      <input type="number" name="soluong" min="1" max="10" value="1">
-                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                      <div
+                        class="d-flex flex-column text-center align-items-center"
+                      >
+                        <input
+                          class="border-1 me-1 ps-1 border-black rounded-2"
+                          type="number"
+                          name="soluong"
+                          min="1"
+                          max="9"
+                          value="1"
+                          style="min-width: 40px; max-width: 60px"
+                        />
+                        <button
+                          class="btn btn-primary p-0 px-2 w-100 mt-1"
+                          onclick="themvaogiohang(this)"
+                        >
+                          Đặt Hàng
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -892,10 +1163,29 @@
                         Module Relay 4 kênh 12V bán dẫn SSR kích mức thấp
                       </p>
                     </div>
-                    <div class="mt-auto border-top">
+                    <div
+                      class="mt-auto border-top d-flex flex-column justify-content-center"
+                    >
                       <h5 class="card-title lh-1 text-center">95,000 đ</h5>
-                      <input type="number" name="soluong" min="1" max="10" value="1">
-                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                      <div
+                        class="d-flex flex-column text-center align-items-center"
+                      >
+                        <input
+                          class="border-1 me-1 ps-1 border-black rounded-2"
+                          type="number"
+                          name="soluong"
+                          min="1"
+                          max="9"
+                          value="1"
+                          style="min-width: 40px; max-width: 60px"
+                        />
+                        <button
+                          class="btn btn-primary p-0 px-2 w-100 mt-1"
+                          onclick="themvaogiohang(this)"
+                        >
+                          Đặt Hàng
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -922,10 +1212,29 @@
                         Module Relay 1 kênh 12V bán dẫn SSR kích mức thấp
                       </p>
                     </div>
-                    <div class="mt-auto border-top">
+                    <div
+                      class="mt-auto border-top d-flex flex-column justify-content-center"
+                    >
                       <h5 class="card-title lh-1 text-center">25,000 đ</h5>
-                      <input type="number" name="soluong" min="1" max="10" value="1">
-                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                      <div
+                        class="d-flex flex-column text-center align-items-center"
+                      >
+                        <input
+                          class="border-1 me-1 ps-1 border-black rounded-2"
+                          type="number"
+                          name="soluong"
+                          min="1"
+                          max="9"
+                          value="1"
+                          style="min-width: 40px; max-width: 60px"
+                        />
+                        <button
+                          class="btn btn-primary p-0 px-2 w-100 mt-1"
+                          onclick="themvaogiohang(this)"
+                        >
+                          Đặt Hàng
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -952,10 +1261,29 @@
                         Module Relay 8 kênh 5V bán dẫn SSR kích mức thấp
                       </p>
                     </div>
-                    <div class="mt-auto border-top">
+                    <div
+                      class="mt-auto border-top d-flex flex-column justify-content-center"
+                    >
                       <h5 class="card-title lh-1 text-center">180,000 đ</h5>
-                      <input type="number" name="soluong" min="1" max="10" value="1">
-                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                      <div
+                        class="d-flex flex-column text-center align-items-center"
+                      >
+                        <input
+                          class="border-1 me-1 ps-1 border-black rounded-2"
+                          type="number"
+                          name="soluong"
+                          min="1"
+                          max="9"
+                          value="1"
+                          style="min-width: 40px; max-width: 60px"
+                        />
+                        <button
+                          class="btn btn-primary p-0 px-2 w-100 mt-1"
+                          onclick="themvaogiohang(this)"
+                        >
+                          Đặt Hàng
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -982,10 +1310,29 @@
                         Module Relay 4 kênh 5V bán dẫn SSR kích mức thấp
                       </p>
                     </div>
-                    <div class="mt-auto border-top">
+                    <div
+                      class="mt-auto border-top d-flex flex-column justify-content-center"
+                    >
                       <h5 class="card-title lh-1 text-center">95,000 đ</h5>
-                      <input type="number" name="soluong" min="1" max="10" value="1">
-                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                      <div
+                        class="d-flex flex-column text-center align-items-center"
+                      >
+                        <input
+                          class="border-1 me-1 ps-1 border-black rounded-2"
+                          type="number"
+                          name="soluong"
+                          min="1"
+                          max="9"
+                          value="1"
+                          style="min-width: 40px; max-width: 60px"
+                        />
+                        <button
+                          class="btn btn-primary p-0 px-2 w-100 mt-1"
+                          onclick="themvaogiohang(this)"
+                        >
+                          Đặt Hàng
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
