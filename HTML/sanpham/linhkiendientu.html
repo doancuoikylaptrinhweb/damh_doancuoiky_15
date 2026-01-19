@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -157,7 +157,24 @@
                 <span class="align-middle">Liên Hệ</span>
               </a>
             </li>
-            <!-- item3 -->
+            <!-- item6 -->
+            <li class="nav-item">
+              <a class="nav-link" href="../giohang.html">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-file-earmark-text-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M4.5 9a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 0 1z"
+                  />
+                </svg>
+                <span class="align-middle">giỏ hàng</span>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -283,26 +300,45 @@
                 d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"
               ></path>
             </svg>
-            <span class="align-middle">Đăng Ký</span>
           </a>
           <a
-            href="..\giohang.html"
+            onclick="showcart()"
             class="nav nav-link border btn text-white btn-outline-secondary p-2 ms-2 hover-bg"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="25"
-              height="25"
+              width="16"
+              height="16"
               fill="currentColor"
-              class="bi bi-cart"
+              class="bi bi-bag-check"
               viewBox="0 0 16 16"
             >
               <path
-                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"
+                fill-rule="evenodd"
+                d="M10.854 8.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708 0"
+              />
+              <path
+                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"
               />
             </svg>
-            <span class="align-middle">Giỏ Hàng</span>
+            <span class="align-middle"
+              >Giỏ Hàng(<span id="countsp">0</span>)</span
+            >
           </a>
+          <div class="showcart" id="showcart">
+            <table>
+              <tr>
+                <th>STT</th>
+                <th>Hình</th>
+                <th>Tên sản phẩm</th>
+                <th>Đơn giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền ($)</th>
+              </tr>
+
+              <tbody id="mycart"></tbody>
+            </table>
+          </div>
         </div>
       </div>
     </nav>
@@ -441,13 +477,29 @@
                         GT60J323 IGBT 60A 600V TO-264 chính hãng TOSHIBA
                       </p>
                     </div>
-                    <div class="mt-auto border-top">
+                    <div
+                      class="mt-auto border-top d-flex flex-column justify-content-center"
+                    >
                       <h5 class="card-title lh-1 text-center">75.000 đ</h5>
-                      <a
-                        href="../giohang.html"
-                        class="btn btn-primary d-block p-0"
-                        >Mua Ngay</a
+                      <div
+                        class="d-flex flex-column text-center align-items-center"
                       >
+                        <input
+                          class="border-1 me-1 ps-1 border-black rounded-2"
+                          type="number"
+                          name="soluong"
+                          min="1"
+                          max="9"
+                          value="1"
+                          style="min-width: 40px; max-width: 60px"
+                        />
+                        <button
+                          class="btn btn-primary p-0 px-2 w-100 mt-1"
+                          onclick="themvaogiohang(this)"
+                        >
+                          Đặt Hàng
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -474,13 +526,29 @@
                         Tụ hóa 25V 470uF 8x12mm tần số cao (túi 500c)
                       </p>
                     </div>
-                    <div class="mt-auto border-top">
+                    <div
+                      class="mt-auto border-top d-flex flex-column justify-content-center"
+                    >
                       <h5 class="card-title lh-1 text-center">400.000 đ</h5>
-                      <a
-                        href="../giohang.html"
-                        class="btn btn-primary d-block p-0"
-                        >Mua Ngay</a
+                      <div
+                        class="d-flex flex-column text-center align-items-center"
                       >
+                        <input
+                          class="border-1 me-1 ps-1 border-black rounded-2"
+                          type="number"
+                          name="soluong"
+                          min="1"
+                          max="9"
+                          value="1"
+                          style="min-width: 40px; max-width: 60px"
+                        />
+                        <button
+                          class="btn btn-primary p-0 px-2 w-100 mt-1"
+                          onclick="themvaogiohang(this)"
+                        >
+                          Đặt Hàng
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -507,13 +575,29 @@
                         B562 2SB562 PNP Transistor 1A 20V TO-92L chính hãng
                       </p>
                     </div>
-                    <div class="mt-auto border-top">
+                    <div
+                      class="mt-auto border-top d-flex flex-column justify-content-center"
+                    >
                       <h5 class="card-title lh-1 text-center">32.000 đ</h5>
-                      <a
-                        href="../giohang.html"
-                        class="btn btn-primary d-block p-0"
-                        >Mua Ngay</a
+                      <div
+                        class="d-flex flex-column text-center align-items-center"
                       >
+                        <input
+                          class="border-1 me-1 ps-1 border-black rounded-2"
+                          type="number"
+                          name="soluong"
+                          min="1"
+                          max="9"
+                          value="1"
+                          style="min-width: 40px; max-width: 60px"
+                        />
+                        <button
+                          class="btn btn-primary p-0 px-2 w-100 mt-1"
+                          onclick="themvaogiohang(this)"
+                        >
+                          Đặt Hàng
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -540,13 +624,29 @@
                         Tụ cao áp 2KV222 2.2nF 2000V DEDEMEI loại tốt đóng dây
                       </p>
                     </div>
-                    <div class="mt-auto border-top">
+                    <div
+                      class="mt-auto border-top d-flex flex-column justify-content-center"
+                    >
                       <h5 class="card-title lh-1 text-center">40.000 đ</h5>
-                      <a
-                        href="../giohang.html"
-                        class="btn btn-primary d-block p-0"
-                        >Mua Ngay</a
+                      <div
+                        class="d-flex flex-column text-center align-items-center"
                       >
+                        <input
+                          class="border-1 me-1 ps-1 border-black rounded-2"
+                          type="number"
+                          name="soluong"
+                          min="1"
+                          max="9"
+                          value="1"
+                          style="min-width: 40px; max-width: 60px"
+                        />
+                        <button
+                          class="btn btn-primary p-0 px-2 w-100 mt-1"
+                          onclick="themvaogiohang(this)"
+                        >
+                          Đặt Hàng
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -574,13 +674,29 @@
                         NXP
                       </p>
                     </div>
-                    <div class="mt-auto border-top">
+                    <div
+                      class="mt-auto border-top d-flex flex-column justify-content-center"
+                    >
                       <h5 class="card-title lh-1 text-center">18.000đ</h5>
-                      <a
-                        href="../giohang.html"
-                        class="btn btn-primary d-block p-0"
-                        >Mua Ngay</a
+                      <div
+                        class="d-flex flex-column text-center align-items-center"
                       >
+                        <input
+                          class="border-1 me-1 ps-1 border-black rounded-2"
+                          type="number"
+                          name="soluong"
+                          min="1"
+                          max="9"
+                          value="1"
+                          style="min-width: 40px; max-width: 60px"
+                        />
+                        <button
+                          class="btn btn-primary p-0 px-2 w-100 mt-1"
+                          onclick="themvaogiohang(this)"
+                        >
+                          Đặt Hàng
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -607,13 +723,29 @@
                         JCS15N60FH TO-220F N-Mosfet 15A 600V chính hãng JSM
                       </p>
                     </div>
-                    <div class="mt-auto border-top">
+                    <div
+                      class="mt-auto border-top d-flex flex-column justify-content-center"
+                    >
                       <h5 class="card-title lh-1 text-center">12.000 đ</h5>
-                      <a
-                        href="../giohang.html"
-                        class="btn btn-primary d-block p-0"
-                        >Mua Ngay</a
+                      <div
+                        class="d-flex flex-column text-center align-items-center"
                       >
+                        <input
+                          class="border-1 me-1 ps-1 border-black rounded-2"
+                          type="number"
+                          name="soluong"
+                          min="1"
+                          max="9"
+                          value="1"
+                          style="min-width: 40px; max-width: 60px"
+                        />
+                        <button
+                          class="btn btn-primary p-0 px-2 w-100 mt-1"
+                          onclick="themvaogiohang(this)"
+                        >
+                          Đặt Hàng
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -640,13 +772,29 @@
                         4558D JRC4558D NJM4558 SOP-8 IC Op-Amp chính hãng JRC
                       </p>
                     </div>
-                    <div class="mt-auto border-top">
+                    <div
+                      class="mt-auto border-top d-flex flex-column justify-content-center"
+                    >
                       <h5 class="card-title lh-1 text-center">35.000đ</h5>
-                      <a
-                        href="../giohang.html"
-                        class="btn btn-primary d-block p-0"
-                        >Mua Ngay</a
+                      <div
+                        class="d-flex flex-column text-center align-items-center"
                       >
+                        <input
+                          class="border-1 me-1 ps-1 border-black rounded-2"
+                          type="number"
+                          name="soluong"
+                          min="1"
+                          max="9"
+                          value="1"
+                          style="min-width: 40px; max-width: 60px"
+                        />
+                        <button
+                          class="btn btn-primary p-0 px-2 w-100 mt-1"
+                          onclick="themvaogiohang(this)"
+                        >
+                          Đặt Hàng
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -674,13 +822,29 @@
                         hãng SILAN
                       </p>
                     </div>
-                    <div class="mt-auto border-top">
+                    <div
+                      class="mt-auto border-top d-flex flex-column justify-content-center"
+                    >
                       <h5 class="card-title lh-1 text-center">130.000 đ</h5>
-                      <a
-                        href="../giohang.html"
-                        class="btn btn-primary d-block p-0"
-                        >Mua Ngay</a
+                      <div
+                        class="d-flex flex-column text-center align-items-center"
                       >
+                        <input
+                          class="border-1 me-1 ps-1 border-black rounded-2"
+                          type="number"
+                          name="soluong"
+                          min="1"
+                          max="9"
+                          value="1"
+                          style="min-width: 40px; max-width: 60px"
+                        />
+                        <button
+                          class="btn btn-primary p-0 px-2 w-100 mt-1"
+                          onclick="themvaogiohang(this)"
+                        >
+                          Đặt Hàng
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -708,13 +872,29 @@
                         SUNMATE
                       </p>
                     </div>
-                    <div class="mt-auto border-top">
+                    <div
+                      class="mt-auto border-top d-flex flex-column justify-content-center"
+                    >
                       <h5 class="card-title lh-1 text-center">15.000 đ</h5>
-                      <a
-                        href="../giohang.html"
-                        class="btn btn-primary d-block p-0"
-                        >Mua Ngay</a
+                      <div
+                        class="d-flex flex-column text-center align-items-center"
                       >
+                        <input
+                          class="border-1 me-1 ps-1 border-black rounded-2"
+                          type="number"
+                          name="soluong"
+                          min="1"
+                          max="9"
+                          value="1"
+                          style="min-width: 40px; max-width: 60px"
+                        />
+                        <button
+                          class="btn btn-primary p-0 px-2 w-100 mt-1"
+                          onclick="themvaogiohang(this)"
+                        >
+                          Đặt Hàng
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -741,13 +921,29 @@
                         RJH9001APK TO-3P chính hãng Renesas
                       </p>
                     </div>
-                    <div class="mt-auto border-top">
+                    <div
+                      class="mt-auto border-top d-flex flex-column justify-content-center"
+                    >
                       <h5 class="card-title lh-1 text-center">62.000 đ</h5>
-                      <a
-                        href="../giohang.html"
-                        class="btn btn-primary d-block p-0"
-                        >Mua Ngay</a
+                      <div
+                        class="d-flex flex-column text-center align-items-center"
                       >
+                        <input
+                          class="border-1 me-1 ps-1 border-black rounded-2"
+                          type="number"
+                          name="soluong"
+                          min="1"
+                          max="9"
+                          value="1"
+                          style="min-width: 40px; max-width: 60px"
+                        />
+                        <button
+                          class="btn btn-primary p-0 px-2 w-100 mt-1"
+                          onclick="themvaogiohang(this)"
+                        >
+                          Đặt Hàng
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -774,13 +970,29 @@
                         Thạch anh dán 16Mhz 4P SMD2520-4P 2.5x2mm
                       </p>
                     </div>
-                    <div class="mt-auto border-top">
+                    <div
+                      class="mt-auto border-top d-flex flex-column justify-content-center"
+                    >
                       <h5 class="card-title lh-1 text-center">23.000 đ</h5>
-                      <a
-                        href="../giohang.html"
-                        class="btn btn-primary d-block p-0"
-                        >Mua Ngay</a
+                      <div
+                        class="d-flex flex-column text-center align-items-center"
                       >
+                        <input
+                          class="border-1 me-1 ps-1 border-black rounded-2"
+                          type="number"
+                          name="soluong"
+                          min="1"
+                          max="9"
+                          value="1"
+                          style="min-width: 40px; max-width: 60px"
+                        />
+                        <button
+                          class="btn btn-primary p-0 px-2 w-100 mt-1"
+                          onclick="themvaogiohang(this)"
+                        >
+                          Đặt Hàng
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -808,13 +1020,29 @@
                         SANKEN
                       </p>
                     </div>
-                    <div class="mt-auto border-top">
+                    <div
+                      class="mt-auto border-top d-flex flex-column justify-content-center"
+                    >
                       <h5 class="card-title lh-1 text-center">13.000 đ</h5>
-                      <a
-                        href="../giohang.html"
-                        class="btn btn-primary d-block p-0"
-                        >Mua Ngay</a
+                      <div
+                        class="d-flex flex-column text-center align-items-center"
                       >
+                        <input
+                          class="border-1 me-1 ps-1 border-black rounded-2"
+                          type="number"
+                          name="soluong"
+                          min="1"
+                          max="9"
+                          value="1"
+                          style="min-width: 40px; max-width: 60px"
+                        />
+                        <button
+                          class="btn btn-primary p-0 px-2 w-100 mt-1"
+                          onclick="themvaogiohang(this)"
+                        >
+                          Đặt Hàng
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -841,13 +1069,29 @@
                         6MBP20VSC-060-50 Module IGBT chính hãng FUJI
                       </p>
                     </div>
-                    <div class="mt-auto border-top">
+                    <div
+                      class="mt-auto border-top d-flex flex-column justify-content-center"
+                    >
                       <h5 class="card-title lh-1 text-center">280.000 đ</h5>
-                      <a
-                        href="../giohang.html"
-                        class="btn btn-primary d-block p-0"
-                        >Mua Ngay</a
+                      <div
+                        class="d-flex flex-column text-center align-items-center"
                       >
+                        <input
+                          class="border-1 me-1 ps-1 border-black rounded-2"
+                          type="number"
+                          name="soluong"
+                          min="1"
+                          max="9"
+                          value="1"
+                          style="min-width: 40px; max-width: 60px"
+                        />
+                        <button
+                          class="btn btn-primary p-0 px-2 w-100 mt-1"
+                          onclick="themvaogiohang(this)"
+                        >
+                          Đặt Hàng
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -874,13 +1118,29 @@
                         Tụ lọc nguồn AC 0.68uF 275VAC chân 22mm Tenta
                       </p>
                     </div>
-                    <div class="mt-auto border-top">
+                    <div
+                      class="mt-auto border-top d-flex flex-column justify-content-center"
+                    >
                       <h5 class="card-title lh-1 text-center">220.000 đ</h5>
-                      <a
-                        href="../giohang.html"
-                        class="btn btn-primary d-block p-0"
-                        >Mua Ngay</a
+                      <div
+                        class="d-flex flex-column text-center align-items-center"
                       >
+                        <input
+                          class="border-1 me-1 ps-1 border-black rounded-2"
+                          type="number"
+                          name="soluong"
+                          min="1"
+                          max="9"
+                          value="1"
+                          style="min-width: 40px; max-width: 60px"
+                        />
+                        <button
+                          class="btn btn-primary p-0 px-2 w-100 mt-1"
+                          onclick="themvaogiohang(this)"
+                        >
+                          Đặt Hàng
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -907,13 +1167,29 @@
                         Diode zener 1W 13V 1N4743A chính hãng Semtech (10c)
                       </p>
                     </div>
-                    <div class="mt-auto border-top">
+                    <div
+                      class="mt-auto border-top d-flex flex-column justify-content-center"
+                    >
                       <h5 class="card-title lh-1 text-center">50.000 đ</h5>
-                      <a
-                        href="../giohang.html"
-                        class="btn btn-primary d-block p-0"
-                        >Mua Ngay</a
+                      <div
+                        class="d-flex flex-column text-center align-items-center"
                       >
+                        <input
+                          class="border-1 me-1 ps-1 border-black rounded-2"
+                          type="number"
+                          name="soluong"
+                          min="1"
+                          max="9"
+                          value="1"
+                          style="min-width: 40px; max-width: 60px"
+                        />
+                        <button
+                          class="btn btn-primary p-0 px-2 w-100 mt-1"
+                          onclick="themvaogiohang(this)"
+                        >
+                          Đặt Hàng
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -940,13 +1216,29 @@
                         Tụ gốm 223 22nF 100V loại tốt thân to (nguyên túi 500c)
                       </p>
                     </div>
-                    <div class="mt-auto border-top">
+                    <div
+                      class="mt-auto border-top d-flex flex-column justify-content-center"
+                    >
                       <h5 class="card-title lh-1 text-center">47.000 đ</h5>
-                      <a
-                        href="../giohang.html"
-                        class="btn btn-primary d-block p-0"
-                        >Mua Ngay</a
+                      <div
+                        class="d-flex flex-column text-center align-items-center"
                       >
+                        <input
+                          class="border-1 me-1 ps-1 border-black rounded-2"
+                          type="number"
+                          name="soluong"
+                          min="1"
+                          max="9"
+                          value="1"
+                          style="min-width: 40px; max-width: 60px"
+                        />
+                        <button
+                          class="btn btn-primary p-0 px-2 w-100 mt-1"
+                          onclick="themvaogiohang(this)"
+                        >
+                          Đặt Hàng
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -974,13 +1266,29 @@
                         đóng dây
                       </p>
                     </div>
-                    <div class="mt-auto border-top">
+                    <div
+                      class="mt-auto border-top d-flex flex-column justify-content-center"
+                    >
                       <h5 class="card-title lh-1 text-center">120.000 đ</h5>
-                      <a
-                        href="../giohang.html"
-                        class="btn btn-primary d-block p-0"
-                        >Mua Ngay</a
+                      <div
+                        class="d-flex flex-column text-center align-items-center"
                       >
+                        <input
+                          class="border-1 me-1 ps-1 border-black rounded-2"
+                          type="number"
+                          name="soluong"
+                          min="1"
+                          max="9"
+                          value="1"
+                          style="min-width: 40px; max-width: 60px"
+                        />
+                        <button
+                          class="btn btn-primary p-0 px-2 w-100 mt-1"
+                          onclick="themvaogiohang(this)"
+                        >
+                          Đặt Hàng
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1007,13 +1315,29 @@
                         Tụ CBB 2000V 474J 470nF 0.47uF 25mm
                       </p>
                     </div>
-                    <div class="mt-auto border-top">
+                    <div
+                      class="mt-auto border-top d-flex flex-column justify-content-center"
+                    >
                       <h5 class="card-title lh-1 text-center">125.000 đ</h5>
-                      <a
-                        href="../giohang.html"
-                        class="btn btn-primary d-block p-0"
-                        >Mua Ngay</a
+                      <div
+                        class="d-flex flex-column text-center align-items-center"
                       >
+                        <input
+                          class="border-1 me-1 ps-1 border-black rounded-2"
+                          type="number"
+                          name="soluong"
+                          min="1"
+                          max="9"
+                          value="1"
+                          style="min-width: 40px; max-width: 60px"
+                        />
+                        <button
+                          class="btn btn-primary p-0 px-2 w-100 mt-1"
+                          onclick="themvaogiohang(this)"
+                        >
+                          Đặt Hàng
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1282,5 +1606,6 @@
         >
       </div>
     </div>
+    <script src="/script/java.js"></script>
   </body>
 </html>

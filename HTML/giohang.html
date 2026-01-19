@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -10,7 +10,7 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="script.js" />
+
     <link
       href="https://cdn.boxicons.com/3.0.4/fonts/basic/boxicons.min.css"
       rel="stylesheet"
@@ -20,7 +20,7 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="..\STYLE\style.css" />
+    <link rel="stylesheet" href="../STYLE/style.css" />
   </head>
   <body style="background-color: rgb(231, 231, 231)">
     <!-- ================nav1===================================================================================== -->
@@ -61,14 +61,18 @@
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="25"
-              height="25"
+              width="16"
+              height="16"
               fill="currentColor"
-              class="bi bi-cart"
+              class="bi bi-bag-check"
               viewBox="0 0 16 16"
             >
               <path
-                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"
+                fill-rule="evenodd"
+                d="M10.854 8.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708 0"
+              />
+              <path
+                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"
               />
             </svg>
           </a>
@@ -158,7 +162,24 @@
                 <span class="align-middle">Liên Hệ</span>
               </a>
             </li>
-            <!-- item3 -->
+            <!-- item6 -->
+            <li class="nav-item">
+              <a class="nav-link" href="giohang.html">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-file-earmark-text-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M4.5 9a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 0 1z"
+                  />
+                </svg>
+                <span class="align-middle">giỏ hàng</span>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -289,10 +310,9 @@
                 d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"
               ></path>
             </svg>
-            <span class="align-middle">Đăng Ký</span>
           </a>
           <a
-            href="giohang.html"
+            onclick="showcart()"
             class="nav nav-link border btn text-white btn-outline-secondary p-2 ms-2 hover-bg"
           >
             <svg
@@ -307,8 +327,24 @@
                 d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"
               />
             </svg>
-            <span class="align-middle">Giỏ Hàng</span>
+            <span class="align-middle"
+              >Giỏ Hàng(<span id="countsp">0</span>)</span
+            >
           </a>
+          <div class="showcart" id="showcart">
+            <table>
+              <tr>
+                <th>STT</th>
+                <th>Hình</th>
+                <th>Tên sản phẩm</th>
+                <th>Đơn giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền ($)</th>
+              </tr>
+
+              <tbody id="mycart"></tbody>
+            </table>
+          </div>
         </div>
       </div>
     </nav>
@@ -356,428 +392,94 @@
           class="sanpham-box flex-grow-1 text-light"
           style="background-color: rgb(48, 48, 48)"
         >
-          <!-- chọn tất cả -->
-          <div
-            class="sanpham-title border d-flex justify-content-between align-items-center border-black"
-          >
-            <label class="ms-2"
-              ><input
-                type="checkbox"
-                class="me-1"
-                style="transform: translateY(15%)"
-                ;
-              />
-              <p class="d-inline text-white">chọn tất cả(0)</p>
-            </label>
-            <button class="btn">Sửa</button>
-          </div>
           <!-- fame sản phẩm -->
-          <div
-            class="sanpham-list d-block d-lg-flex justify-content-between pt-0"
-          >
-            <!-- check -->
-            <div class="check d-flex justify-content-between mt-1 me-2">
-              <label class="d-flex align-items-center"
-                ><input type="checkbox" style="accent-color: rgb(19, 196, 255)"
-              /></label>
-              <button
-                class="btn d-lg-none p-0 px-3"
-                style="color: rgb(255, 255, 255)"
-              >
-                <i class="bxr bx-trash" style="transform: translateY(10%)"></i>
-              </button>
-            </div>
-            <!-- thong tin -->
-            <div class="sanpham my-1 d-flex flex-grow-1">
-              <div class="img-box flex-shrink-0">
-                <img
-                  src="../IMG/2SC3284 NPN Transistor 14A 150V TO-3P chính hãng SANKEN.png"
-                  style="object-fit: cover; transform-origin: center"
-                  alt=""
-                />
+          <div class="p-3">
+            <div class="card bg-secondary text-white mb-4 border-0 shadow-sm">
+              <div class="card-body">
+                <h5 class="section-title text-white">THÔNG TIN NHẬN HÀNG</h5>
+                <table class="w-100 thongtinnhanhang text-white">
+                  <tr>
+                    <td width="25%">Họ tên</td>
+                    <td>
+                      <input
+                        type="text"
+                        name="hoten"
+                        placeholder="Nhập họ và tên"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Địa chỉ</td>
+                    <td>
+                      <input
+                        type="text"
+                        name="diachi"
+                        placeholder="Số nhà, tên đường..."
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Điện thoại</td>
+                    <td>
+                      <input
+                        type="text"
+                        name="dienthoai"
+                        placeholder="Mời nhập số điện thoại"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Email</td>
+                    <td>
+                      <input
+                        type="text"
+                        name="email"
+                        placeholder="name@example.com"
+                      />
+                    </td>
+                  </tr>
+                </table>
               </div>
-              <div class="d-flex flex-column ms-1" style="width: 100%">
-                <div class="m-0 p-0 lh-1 text-wrap">
-                  2SC3284 NPN Transistor 14A 150V TO-3P chính hãng SANKEN
-                </div>
-                <div class="num-box mt-auto">
-                  <b>
-                    <p class="fs-5 m-0 p-0">10.000đ</p>
-                  </b>
-                  <div class="num">
-                    <p class="d-inline m-0 p-0 font-monospace">Số Lượng:</p>
-                    <input
-                      type="number"
-                      min="0"
-                      value="0"
-                      style="width: 3rem"
-                      class="rounded-2 border border-2 border-primary-subtle"
-                    />
-                  </div>
+            </div>
+
+            <div class="card bg-secondary text-white border-0 shadow-sm">
+              <div class="card-body">
+                <h5 class="section-title text-white">GIỎ HÀNG CỦA BẠN</h5>
+                <div class="table-responsive">
+                  <table
+                    class="table table-dark table-hover align-middle m-0 cart-table"
+                  >
+                    <thead class="table-light">
+                      <tr>
+                        <th>STT</th>
+                        <th>Hình</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Đơn giá</th>
+                        <th width="100px">Số lượng</th>
+                        <th>Thành tiền</th>
+                        <th>Xóa</th>
+                      </tr>
+                    </thead>
+                    <tbody id="mycart-main"></tbody>
+                  </table>
                 </div>
               </div>
-            </div>
-            <div class="d-flex align-items-stretch">
-              <button class="d-none d-lg-block btn text-white p-1 my-2">
-                <i class="bxr bx-trash" style="transform: translateY(10%)"></i>
-              </button>
             </div>
           </div>
-          <hr class="text-white border border-2 border-white m-0" />
-          <div
-            class="sanpham-list d-block d-lg-flex justify-content-between pt-0"
-          >
-            <!-- check -->
-            <div class="check d-flex justify-content-between mt-1 me-2">
-              <label class="d-flex align-items-center"
-                ><input type="checkbox" style="accent-color: rgb(19, 196, 255)"
-              /></label>
-              <button
-                class="btn d-lg-none p-0 px-3"
-                style="color: rgb(255, 255, 255)"
-              >
-                <i class="bxr bx-trash" style="transform: translateY(10%)"></i>
-              </button>
-            </div>
-            <!-- thong tin -->
-            <div class="sanpham my-1 d-flex flex-grow-1">
-              <div class="img-box flex-shrink-0">
-                <img
-                  src="../IMG/75N08S RU75N08S N-Mosfet 75A 80V TO-263 chính hãng VBSemi.png"
-                  style="object-fit: cover; transform-origin: center"
-                  alt=""
-                />
-              </div>
-              <div class="d-flex flex-column ms-1" style="width: 100%">
-                <div class="m-0 p-0 lh-1 text-wrap">
-                  75N08S RU75N08S N-Mosfet 75A 80V TO-263 chính hãng VBSemi
-                </div>
-                <div class="num-box mt-auto">
-                  <b>
-                    <p class="fs-5 m-0 p-0">30.000đ</p>
-                  </b>
-                  <div class="num">
-                    <p class="d-inline m-0 p-0 font-monospace">Số Lượng:</p>
-                    <input
-                      type="number"
-                      min="0"
-                      value="0"
-                      style="width: 3rem"
-                      class="rounded-2 border border-2 border-primary-subtle"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="d-flex align-items-stretch">
-              <button class="d-none d-lg-block btn text-white p-1 my-2">
-                <i class="bxr bx-trash" style="transform: translateY(10%)"></i>
-              </button>
-            </div>
-          </div>
-          <hr class="text-white border border-2 border-white m-0" />
-          <div
-            class="sanpham-list d-block d-lg-flex justify-content-between pt-0"
-          >
-            <!-- check -->
-            <div class="check d-flex justify-content-between mt-1 me-2">
-              <label class="d-flex align-items-center"
-                ><input type="checkbox" style="accent-color: rgb(19, 196, 255)"
-              /></label>
-              <button
-                class="btn d-lg-none p-0 px-3"
-                style="color: rgb(255, 255, 255)"
-              >
-                <i class="bxr bx-trash" style="transform: translateY(10%)"></i>
-              </button>
-            </div>
-            <!-- thong tin -->
-            <div class="sanpham my-1 d-flex flex-grow-1">
-              <div class="img-box flex-shrink-0">
-                <img
-                  src="../IMG/ADAU1701JSTZ LQFP-48 IC Audio chính hãng Analog Devices.png"
-                  alt=""
-                  style="object-fit: cover; transform-origin: center"
-                />
-              </div>
-              <div class="d-flex flex-column ms-1" style="width: 100%">
-                <div class="m-0 p-0 lh-1 text-wrap">
-                  ADAU1701JSTZ LQFP-48 IC Audio chính hãng Analog Devices
-                </div>
-                <div class="num-box mt-auto">
-                  <b>
-                    <p class="fs-5 m-0 p-0">23.000đ</p>
-                  </b>
-                  <div class="num">
-                    <p class="d-inline m-0 p-0 font-monospace">Số Lượng:</p>
-                    <input
-                      type="number"
-                      min="0"
-                      value="0"
-                      style="width: 3rem"
-                      class="rounded-2 border border-2 border-primary-subtle"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="d-flex align-items-stretch">
-              <button class="d-none d-lg-block btn text-white p-1 my-2">
-                <i class="bxr bx-trash" style="transform: translateY(10%)"></i>
-              </button>
-            </div>
-          </div>
-          <hr class="text-white border border-2 border-white m-0" />
-          <div
-            class="sanpham-list d-block d-lg-flex justify-content-between pt-0"
-          >
-            <!-- check -->
-            <div class="check d-flex justify-content-between mt-1 me-2">
-              <label class="d-flex align-items-center"
-                ><input type="checkbox" style="accent-color: rgb(19, 196, 255)"
-              /></label>
-              <button
-                class="btn d-lg-none p-0 px-3"
-                style="color: rgb(255, 255, 255)"
-              >
-                <i class="bxr bx-trash" style="transform: translateY(10%)"></i>
-              </button>
-            </div>
-            <!-- thong tin -->
-            <div class="sanpham my-1 d-flex flex-grow-1">
-              <div class="img-box flex-shrink-0">
-                <img
-                  src="../IMG/Biến áp CT cảm ứng Q63-d G Q59 dùng cho điều hòa Panasonic, DaiKin.png"
-                  style="object-fit: cover; transform-origin: center"
-                  alt=""
-                />
-              </div>
-              <div class="d-flex flex-column ms-1" style="width: 100%">
-                <div class="m-0 p-0 lh-1 text-wrap">
-                  Biến áp CT cảm ứng Q63-d G Q59 dùng cho điều hòa Panasonic,
-                  DaiKin
-                </div>
-                <div class="num-box mt-auto">
-                  <b>
-                    <p class="fs-5 m-0 p-0">12.000đ</p>
-                  </b>
-                  <div class="num">
-                    <p class="d-inline m-0 p-0 font-monospace">Số Lượng:</p>
-                    <input
-                      type="number"
-                      min="0"
-                      value="0"
-                      style="width: 3rem"
-                      class="rounded-2 border border-2 border-primary-subtle"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="d-flex align-items-stretch">
-              <button class="d-none d-lg-block btn text-white p-1 my-2">
-                <i class="bxr bx-trash" style="transform: translateY(10%)"></i>
-              </button>
-            </div>
-          </div>
-          <hr class="text-white border border-2 border-white m-0" />
-          <div
-            class="sanpham-list d-block d-lg-flex justify-content-between pt-0"
-          >
-            <!-- check -->
-            <div class="check d-flex justify-content-between mt-1 me-2">
-              <label class="d-flex align-items-center"
-                ><input type="checkbox" style="accent-color: rgb(19, 196, 255)"
-              /></label>
-              <button
-                class="btn d-lg-none p-0 px-3"
-                style="color: rgb(255, 255, 255)"
-              >
-                <i class="bxr bx-trash" style="transform: translateY(10%)"></i>
-              </button>
-            </div>
-            <!-- thong tin -->
-            <div class="sanpham my-1 d-flex flex-grow-1">
-              <div class="img-box flex-shrink-0">
-                <img
-                  src="../IMG/6MBP20VSC-060-50 Module IGBT chính hãng FUJI.png"
-                  style="object-fit: cover; transform-origin: center"
-                  alt=""
-                />
-              </div>
-              <div class="d-flex flex-column ms-1" style="width: 100%">
-                <div class="m-0 p-0 lh-1 text-wrap">
-                  6MBP20VSC-060-50 Module IGBT chính hãng FUJI
-                </div>
-                <div class="num-box mt-auto">
-                  <b>
-                    <p class="fs-5 m-0 p-0">9.000đ</p>
-                  </b>
-                  <div class="num">
-                    <p class="d-inline m-0 p-0 font-monospace">Số Lượng:</p>
-                    <input
-                      type="number"
-                      min="0"
-                      value="0"
-                      style="width: 3rem"
-                      class="rounded-2 border border-2 border-primary-subtle"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="d-flex align-items-stretch">
-              <button class="d-none d-lg-block btn text-white p-1 my-2">
-                <i class="bxr bx-trash" style="transform: translateY(10%)"></i>
-              </button>
-            </div>
-          </div>
-          <hr class="text-white border border-2 border-white m-0" />
-          <div
-            class="sanpham-list d-block d-lg-flex justify-content-between pt-0"
-          >
-            <!-- check -->
-            <div class="check d-flex justify-content-between mt-1 me-2">
-              <label class="d-flex align-items-center"
-                ><input type="checkbox" style="accent-color: rgb(19, 196, 255)"
-              /></label>
-              <button
-                class="btn d-lg-none p-0 px-3"
-                style="color: rgb(255, 255, 255)"
-              >
-                <i class="bxr bx-trash" style="transform: translateY(10%)"></i>
-              </button>
-            </div>
-            <!-- thong tin -->
-            <div class="sanpham my-1 d-flex flex-grow-1">
-              <div class="img-box flex-shrink-0">
-                <img
-                  src="../IMG/Bầu nóng máy lọc nước 1.5L 420W D120x150mm Inox 304 chân đứng.png"
-                  style="object-fit: cover; transform-origin: center"
-                  alt=""
-                />
-              </div>
-              <div class="d-flex flex-column ms-1" style="width: 100%">
-                <div class="m-0 p-0 lh-1 text-wrap">
-                  Bầu nóng máy lọc nước 1.5L 420W D120x150mm Inox 304 chân đứng
-                </div>
-                <div class="num-box mt-auto">
-                  <b>
-                    <p class="fs-5 m-0 p-0">10.000đ</p>
-                  </b>
-                  <div class="num">
-                    <p class="d-inline m-0 p-0 font-monospace">Số Lượng:</p>
-                    <input
-                      type="number"
-                      min="0"
-                      value="0"
-                      style="width: 3rem"
-                      class="rounded-2 border border-2 border-primary-subtle"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="d-flex align-items-stretch">
-              <button class="d-none d-lg-block btn text-white p-1 my-2">
-                <i class="bxr bx-trash" style="transform: translateY(10%)"></i>
-              </button>
-            </div>
-          </div>
-          <hr class="text-white border border-2 border-white m-0" />
-          <div
-            class="sanpham-list d-block d-lg-flex justify-content-between pt-0"
-          >
-            <!-- check -->
-            <div class="check d-flex justify-content-between mt-1 me-2">
-              <label class="d-flex align-items-center"
-                ><input type="checkbox" style="accent-color: rgb(19, 196, 255)"
-              /></label>
-              <button
-                class="btn d-lg-none p-0 px-3"
-                style="color: rgb(255, 255, 255)"
-              >
-                <i class="bxr bx-trash" style="transform: translateY(10%)"></i>
-              </button>
-            </div>
-            <!-- thong tin -->
-            <div class="sanpham my-1 d-flex flex-grow-1">
-              <div class="img-box flex-shrink-0">
-                <img
-                  src="../IMG/Dây audio 3.5mm đực-đực dài 3m loại tốt.png"
-                  style="object-fit: cover; transform-origin: center"
-                  alt=""
-                />
-              </div>
-              <div class="d-flex flex-column ms-1" style="width: 100%">
-                <div class="m-0 p-0 lh-1 text-wrap">
-                  Dây audio 3.5mm đực-đực dài 3m loại tốt
-                </div>
-                <div class="num-box mt-auto">
-                  <b>
-                    <p class="fs-5 m-0 p-0">8.000đ</p>
-                  </b>
-                  <div class="num">
-                    <p class="d-inline m-0 p-0 font-monospace">Số Lượng:</p>
-                    <input
-                      type="number"
-                      min="0"
-                      value="0"
-                      style="width: 3rem"
-                      class="rounded-2 border border-2 border-primary-subtle"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="d-flex align-items-stretch">
-              <button class="d-none d-lg-block btn text-white p-1 my-2">
-                <i class="bxr bx-trash" style="transform: translateY(10%)"></i>
-              </button>
-            </div>
-          </div>
-          <hr class="text-white border border-2 border-white m-0" />
-        </div>
-        <!-- thanh toán -->
-        <div class="thanhtoan flex-wrap d-flex align-items-lg-stretch">
-          <div
-            class="bg-dark bg-gradient d-lg-none w-100"
-            style="height: 20px"
-          ></div>
-          <div class="map bg-primary-subtle p-2 flex-grow-1">
-            <div class="w-100">
-              <div
-                class="btn btn-outline-light border border-secondary text-center w-100 bg-secondary"
-              >
-                <a href="#" class="text-decoration-none text-white">
-                  đổi địa chỉ
-                  <i
-                    class="bxr bx-location"
-                    style="transform: translateY(10%)"
-                  ></i>
-                </a>
-              </div>
-            </div>
-            <div class="text-center border border-secondary rounded-3 mt-2">
-              <i class="bxr bx-location" style="transform: translateY(10%)"></i>
-              <p class="d-inline">xã Đức Tùng, huyện Đức Thọ, tỉnh Hà Tĩnh</p>
-            </div>
-            <hr />
-            <div class="border border-secondary rounded-3">
-              <div class="d-flex justify-content-between px-3 py-3">
-                <p class="m-0 p-0">thành tiền</p>
-                <p class="m-0 p-0">100.000 đ</p>
-              </div>
-            </div>
-            <div class="w-100 mt-2">
-              <button class="btn btn-primary w-100 text-uppercase">
-                Đặt Hàng(0)
-              </button>
-            </div>
+          <div class="d-flex flex-column justify-content-evenly w-50 m-auto">
+            <button class="btn mb-2 btn-secondary" onclick="xoagiohang()">
+              Xóa Toàn Bộ
+            </button>
+            <button
+              class="btn mb-2 btn-primary"
+              type="button"
+              onclick="dathang()"
+            >
+              Đặt hàng
+            </button>
           </div>
         </div>
       </div>
-      <div class="bg-dark bg-gradient" style="height: 20px"></div>
     </div>
     <!-- ==============ketnoi======================================================================================= -->
     <div class="fame_ket mt-2 bg-dark-subtle d-block d-lg-flex">
@@ -1033,5 +735,9 @@
         >
       </div>
     </div>
+    <script src="/script/java.js"></script>
+    <script>
+      showgiohang_trangthanhtoan();
+    </script>
   </body>
 </html>

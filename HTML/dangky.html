@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -157,7 +157,24 @@
                 <span class="align-middle">Liên Hệ</span>
               </a>
             </li>
-            <!-- item3 -->
+            <!-- item6 -->
+            <li class="nav-item">
+              <a class="nav-link" href="giohang.html">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-file-earmark-text-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M4.5 9a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 0 1z"
+                  />
+                </svg>
+                <span class="align-middle">giỏ hàng</span>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -288,7 +305,6 @@
                 d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"
               ></path>
             </svg>
-            <span class="align-middle">Đăng Ký</span>
           </a>
           <a
             href="giohang.html"
@@ -296,14 +312,18 @@
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="25"
-              height="25"
+              width="16"
+              height="16"
               fill="currentColor"
-              class="bi bi-cart"
+              class="bi bi-bag-check"
               viewBox="0 0 16 16"
             >
               <path
-                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"
+                fill-rule="evenodd"
+                d="M10.854 8.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708 0"
+              />
+              <path
+                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"
               />
             </svg>
             <span class="align-middle">Giỏ Hàng</span>
@@ -365,93 +385,38 @@
         <h6 class="fs-3 text-uppercase text-center" style="color: red">
           đăng ký
         </h6>
-        <div class="input_dn d-flex flex-column justify-content-center">
-          <div class="input-box m-0">
-            <input type="text" placeholder="nhập số điện thoại" required />
-            <i class="bxr bx-phone"></i>
+        <form
+          class="input_dn d-flex flex-column justify-content-center"
+          onsubmit="signup(event)"
+        >
+          <div class="input-box m-0 mb-1">
+            <input id="sdt" placeholder="Số điện thoại" />
           </div>
-          <div class="input-box">
-            <input type="text" placeholder="nhập mật khẩu" required />
-            <i class="bxr bx-lock"></i>
+          <div class="input-box m-0 mb-1">
+            <input id="email" placeholder="Email" />
           </div>
-          <div class="input-box m-0">
-            <input type="text" placeholder="nhập họ và tên" required />
-            <i class="bxr bx-user-circle"></i>
+          <div class="input-box m-0 mb-1">
+            <input id="hoten" placeholder="Họ tên" />
           </div>
-          <div class="d-flex input-select container-fluid">
-            <select class="form-select" name="tinhthanh" id="#tinh">
-              <option selected style="color: white; background-color: black">
-                Tỉnh Thành phố
-              </option>
-              <option value="Thanh Hóa">Thanh Hóa</option>
-              <option value="Nghệ An">Nghệ An</option>
-              <option value="Hà Tĩnh">Hà Tĩnh</option>
-              <option value="Quảng Bình">Quảng Bình</option>
-              <option value="Quảng Trị">Quảng Trị</option>
-              <option value="Thừa Thiên Huế">Thừa Thiên Huế</option>
-              <option value="Quảng Nam">Quảng Nam</option>
-              <option value="Quảng Ngãi">Quảng Ngãi</option>
-              <option value="Bình Định">Bình Định</option>
-            </select>
+          <div class="input-box m-0 mb-1">
+            <input id="mk" type="password" placeholder="Mật khẩu" />
           </div>
-          <div class="d-flex input-select container-fluid m-0">
-            <select name="tinhthanh" class="form-select" id="#tinh">
-              <option selected style="color: white; background-color: black">
-                Quận Huyện
-              </option>
-              <option value="Hải Châu">Hải Châu</option>
-              <option value="Thanh Khê">Thanh Khê</option>
-              <option value=" Sơn Trà"> Sơn Trà</option>
-              <option value="Ngũ Hành Sơn">Ngũ Hành Sơn</option>
-              <option value="Liên Chiểu">Liên Chiểu</option>
-              <option value="Cẩm Lệ">Cẩm Lệ</option>
-              <option value="Hoàng Sa">Hoàng Sa</option>
-              <option value="Hòa Vang">Hòa Vang</option>
-              <option value="kum-tom">kum-tom</option>
-            </select>
-          </div>
-          <div class="d-flex input-select container-fluid">
-            <select name="tinhthanh" class="form-select" id="#tinh">
-              <option selected style="color: white; background-color: black">
-                Phường Xã
-              </option>
-              <option value="Vĩnh Ngọc">Vĩnh Ngọc</option>
-              <option value="An Phú Tây">An Phú Tây</option>
-              <option value="Hòa Phong">Hòa Phong</option>
-              <option value="Nam Kim">Nam Kim</option>
-              <option value="Đông Xuân">Đông Xuân</option>
-              <option value="Tân Triều">Tân Triều</option>
-              <option value="Bát Tràng">Bát Tràng</option>
-              <option value="Cổ Loa">Cổ Loa</option>
-              <option value="Yên Tập">Yên Tập</option>
-            </select>
-          </div>
-          <div class="input-box m-0">
-            <input type="text" placeholder="nhập số nhà, đường" required />
-            <i class="bxr bx-location-alt-2"></i>
-          </div>
-          <div class="input-box">
-            <input type="text" placeholder="Email" required />
-            <i class="bxr bx-envelope"></i>
-          </div>
-          <div class="nho-pass d-flex">
-            <label> <input type="checkbox" />nhớ mật khẩu </label>
-          </div>
-          <div class="w-100">
-            <button
-              class="btn btn-primary text-uppercase rounded-5 text-center container mb-1"
-            >
-              đăng ký
-            </button>
-          </div>
-          <div class="taotaikhoan container text-center">
-            <p class="d-inline">đã có tài khoản?</p>
-            <a
-              href="dangnhap.html"
-              class="link text-black-50 text-decoration-none"
-              >đăng nhập</a
-            >
-          </div>
+
+          <button
+            class="btn btn-primary border"
+            style="border-radius: 30px; height: 3rem"
+            type="submit"
+          >
+            Đăng ký
+          </button>
+        </form>
+        <div class="taotaikhoan container text-center">
+          <p class="d-inline">đã có tài khoản?</p>
+          <a
+            href="dangnhap.html"
+            class="link text-black-50 text-decoration-none"
+            >đăng nhập</a
+          >
         </div>
       </div>
     </div>
@@ -710,5 +675,6 @@
         >
       </div>
     </div>
+    <script src="/script/auth.js"></script>
   </body>
 </html>
