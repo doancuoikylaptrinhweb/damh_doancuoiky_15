@@ -11,14 +11,14 @@
     width: auto;
   }
 }
-.showcart{
+.showcart {
   position: fixed;
-    border-radius: 10px;
-    right: 60px;
-    top: 120px;
-    padding: 10px;
-    background-color: white;
-    border: 1px solid #ccc solid;
+  border-radius: 10px;
+  right: 60px;
+  top: 120px;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ccc solid;
 }
 .fame_tieude {
   margin-inline: 150px;
@@ -175,7 +175,9 @@
 .the-item {
   overflow: hidden;
   outline: none;
-  transition: box-shadow 0.1s ease, transform 0.2s ease;
+  transition:
+    box-shadow 0.1s ease,
+    transform 0.2s ease;
 }
 
 .the-item:hover {
@@ -329,38 +331,38 @@
   background-color: rgb(255, 255, 255, 0.07);
 }
 
-
-
 /* CSS tùy chỉnh cho bảng và form */
-.thongtinnhanhang td, .row.mb td, .row.mb th {
-    padding: 12px;
-    border-bottom: 1px solid #dee2e6;
+.thongtinnhanhang td,
+.row.mb td,
+.row.mb th {
+  padding: 12px;
+  border-bottom: 1px solid #dee2e6;
 }
 
 .thongtinnhanhang input {
-    width: 100%;
-    border: 1px solid #ced4da;
-    border-radius: 4px;
-    padding: 6px 12px;
+  width: 100%;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 6px 12px;
 }
 
 .thongtinnhanhang input:focus {
-    outline: none;
-    border-color: #86b7fe;
-    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  outline: none;
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 
 .cart-table img {
-    width: 60px;
-    height: auto;
-    border-radius: 5px;
+  width: 60px;
+  height: auto;
+  border-radius: 5px;
 }
 
 .section-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #ffc107; /* Màu vàng làm điểm nhấn */
-    border-left: 4px solid #ffc107;
-    padding-left: 10px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffc107; /* Màu vàng làm điểm nhấn */
+  border-left: 4px solid #ffc107;
+  padding-left: 10px;
 }
