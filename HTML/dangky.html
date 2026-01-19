@@ -382,85 +382,14 @@
         <h6 class="fs-3 text-uppercase text-center" style="color: red">
           đăng ký
         </h6>
-        <div class="input_dn d-flex flex-column justify-content-center">
-          <div class="input-box m-0">
-            <input type="text" placeholder="nhập số điện thoại" required />
-            <i class="bxr bx-phone"></i>
-          </div>
-          <div class="input-box">
-            <input type="text" placeholder="nhập mật khẩu" required />
-            <i class="bxr bx-lock"></i>
-          </div>
-          <div class="input-box m-0">
-            <input type="text" placeholder="nhập họ và tên" required />
-            <i class="bxr bx-user-circle"></i>
-          </div>
-          <div class="d-flex input-select container-fluid">
-            <select class="form-select" name="tinhthanh" id="#tinh">
-              <option selected style="color: white; background-color: black">
-                Tỉnh Thành phố
-              </option>
-              <option value="Thanh Hóa">Thanh Hóa</option>
-              <option value="Nghệ An">Nghệ An</option>
-              <option value="Hà Tĩnh">Hà Tĩnh</option>
-              <option value="Quảng Bình">Quảng Bình</option>
-              <option value="Quảng Trị">Quảng Trị</option>
-              <option value="Thừa Thiên Huế">Thừa Thiên Huế</option>
-              <option value="Quảng Nam">Quảng Nam</option>
-              <option value="Quảng Ngãi">Quảng Ngãi</option>
-              <option value="Bình Định">Bình Định</option>
-            </select>
-          </div>
-          <div class="d-flex input-select container-fluid m-0">
-            <select name="tinhthanh" class="form-select" id="#tinh">
-              <option selected style="color: white; background-color: black">
-                Quận Huyện
-              </option>
-              <option value="Hải Châu">Hải Châu</option>
-              <option value="Thanh Khê">Thanh Khê</option>
-              <option value=" Sơn Trà"> Sơn Trà</option>
-              <option value="Ngũ Hành Sơn">Ngũ Hành Sơn</option>
-              <option value="Liên Chiểu">Liên Chiểu</option>
-              <option value="Cẩm Lệ">Cẩm Lệ</option>
-              <option value="Hoàng Sa">Hoàng Sa</option>
-              <option value="Hòa Vang">Hòa Vang</option>
-              <option value="kum-tom">kum-tom</option>
-            </select>
-          </div>
-          <div class="d-flex input-select container-fluid">
-            <select name="tinhthanh" class="form-select" id="#tinh">
-              <option selected style="color: white; background-color: black">
-                Phường Xã
-              </option>
-              <option value="Vĩnh Ngọc">Vĩnh Ngọc</option>
-              <option value="An Phú Tây">An Phú Tây</option>
-              <option value="Hòa Phong">Hòa Phong</option>
-              <option value="Nam Kim">Nam Kim</option>
-              <option value="Đông Xuân">Đông Xuân</option>
-              <option value="Tân Triều">Tân Triều</option>
-              <option value="Bát Tràng">Bát Tràng</option>
-              <option value="Cổ Loa">Cổ Loa</option>
-              <option value="Yên Tập">Yên Tập</option>
-            </select>
-          </div>
-          <div class="input-box m-0">
-            <input type="text" placeholder="nhập số nhà, đường" required />
-            <i class="bxr bx-location-alt-2"></i>
-          </div>
-          <div class="input-box">
-            <input type="text" placeholder="Email" required />
-            <i class="bxr bx-envelope"></i>
-          </div>
-          <div class="nho-pass d-flex">
-            <label> <input type="checkbox" />nhớ mật khẩu </label>
-          </div>
-          <div class="w-100">
-            <button
-              class="btn btn-primary text-uppercase rounded-5 text-center container mb-1"
-            >
-              đăng ký
-            </button>
-          </div>
+        <form onsubmit="signup(event)">
+    <input id="sdt" placeholder="Số điện thoại">
+    <input id="email" placeholder="Email">
+    <input id="hoten" placeholder="Họ tên">
+    <input id="mk" type="password" placeholder="Mật khẩu">
+
+    <button type="submit">Đăng ký</button>
+</form>
           <div class="taotaikhoan container text-center">
             <p class="d-inline">đã có tài khoản?</p>
             <a
@@ -727,5 +656,6 @@
         >
       </div>
     </div>
+    <script src="/script/auth.js"></script>
   </body>
 </html>
