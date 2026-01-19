@@ -157,7 +157,24 @@
                 <span class="align-middle">Liên Hệ</span>
               </a>
             </li>
-            <!-- item3 -->
+            <!-- item6 -->
+              <li class="nav-item">
+              <a class="nav-link" href="../giohang.html">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-file-earmark-text-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M4.5 9a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 0 1z"
+                  />
+                </svg>
+                <span class="align-middle">giỏ hàng</span>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -286,7 +303,7 @@
             <span class="align-middle">Đăng Ký</span>
           </a>
           <a
-            href="..\giohang.html"
+            onclick="showcart()"
             class="nav nav-link border btn text-white btn-outline-secondary p-2 ms-2 hover-bg"
           >
             <svg
@@ -301,8 +318,22 @@
                 d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"
               />
             </svg>
-            <span class="align-middle">Giỏ Hàng</span>
+            <span class="align-middle">Giỏ Hàng(<span id="countsp">0</span>)</span>
           </a>
+          <div class="showcart" id="showcart"><table>
+                        <tr>
+                            <th>STT</th>
+                            <th>Hình</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Đơn giá</th>
+                            <th>Số lượng</th>
+                            <th>Thành tiền ($)</th>
+                        </tr>
+                        
+                        <tbody id="mycart">
+
+                        </tbody>
+                    </table></div>
         </div>
       </div>
     </nav>
@@ -443,11 +474,8 @@
                     </div>
                     <div class="mt-auto border-top">
                       <h5 class="card-title lh-1 text-center">75.000 đ</h5>
-                      <a
-                        href="../giohang.html"
-                        class="btn btn-primary d-block p-0"
-                        >Mua Ngay</a
-                      >
+                      <input type="number" name="soluong" min="1" max="10" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
                     </div>
                   </div>
                 </div>
@@ -476,11 +504,8 @@
                     </div>
                     <div class="mt-auto border-top">
                       <h5 class="card-title lh-1 text-center">400.000 đ</h5>
-                      <a
-                        href="../giohang.html"
-                        class="btn btn-primary d-block p-0"
-                        >Mua Ngay</a
-                      >
+                      <input type="number" name="soluong" min="1" max="10" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
                     </div>
                   </div>
                 </div>
@@ -509,11 +534,8 @@
                     </div>
                     <div class="mt-auto border-top">
                       <h5 class="card-title lh-1 text-center">32.000 đ</h5>
-                      <a
-                        href="../giohang.html"
-                        class="btn btn-primary d-block p-0"
-                        >Mua Ngay</a
-                      >
+                      <input type="number" name="soluong" min="1" max="10" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
                     </div>
                   </div>
                 </div>
@@ -542,11 +564,8 @@
                     </div>
                     <div class="mt-auto border-top">
                       <h5 class="card-title lh-1 text-center">40.000 đ</h5>
-                      <a
-                        href="../giohang.html"
-                        class="btn btn-primary d-block p-0"
-                        >Mua Ngay</a
-                      >
+                      <input type="number" name="soluong" min="1" max="10" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
                     </div>
                   </div>
                 </div>
@@ -576,11 +595,8 @@
                     </div>
                     <div class="mt-auto border-top">
                       <h5 class="card-title lh-1 text-center">18.000đ</h5>
-                      <a
-                        href="../giohang.html"
-                        class="btn btn-primary d-block p-0"
-                        >Mua Ngay</a
-                      >
+                      <input type="number" name="soluong" min="1" max="10" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
                     </div>
                   </div>
                 </div>
@@ -609,11 +625,8 @@
                     </div>
                     <div class="mt-auto border-top">
                       <h5 class="card-title lh-1 text-center">12.000 đ</h5>
-                      <a
-                        href="../giohang.html"
-                        class="btn btn-primary d-block p-0"
-                        >Mua Ngay</a
-                      >
+                      <input type="number" name="soluong" min="1" max="10" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
                     </div>
                   </div>
                 </div>
@@ -642,11 +655,8 @@
                     </div>
                     <div class="mt-auto border-top">
                       <h5 class="card-title lh-1 text-center">35.000đ</h5>
-                      <a
-                        href="../giohang.html"
-                        class="btn btn-primary d-block p-0"
-                        >Mua Ngay</a
-                      >
+                      <input type="number" name="soluong" min="1" max="10" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
                     </div>
                   </div>
                 </div>
@@ -676,11 +686,8 @@
                     </div>
                     <div class="mt-auto border-top">
                       <h5 class="card-title lh-1 text-center">130.000 đ</h5>
-                      <a
-                        href="../giohang.html"
-                        class="btn btn-primary d-block p-0"
-                        >Mua Ngay</a
-                      >
+                      <input type="number" name="soluong" min="1" max="10" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
                     </div>
                   </div>
                 </div>
@@ -710,11 +717,8 @@
                     </div>
                     <div class="mt-auto border-top">
                       <h5 class="card-title lh-1 text-center">15.000 đ</h5>
-                      <a
-                        href="../giohang.html"
-                        class="btn btn-primary d-block p-0"
-                        >Mua Ngay</a
-                      >
+                      <input type="number" name="soluong" min="1" max="10" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
                     </div>
                   </div>
                 </div>
@@ -743,11 +747,8 @@
                     </div>
                     <div class="mt-auto border-top">
                       <h5 class="card-title lh-1 text-center">62.000 đ</h5>
-                      <a
-                        href="../giohang.html"
-                        class="btn btn-primary d-block p-0"
-                        >Mua Ngay</a
-                      >
+                      <input type="number" name="soluong" min="1" max="10" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
                     </div>
                   </div>
                 </div>
@@ -776,11 +777,8 @@
                     </div>
                     <div class="mt-auto border-top">
                       <h5 class="card-title lh-1 text-center">23.000 đ</h5>
-                      <a
-                        href="../giohang.html"
-                        class="btn btn-primary d-block p-0"
-                        >Mua Ngay</a
-                      >
+                      <input type="number" name="soluong" min="1" max="10" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
                     </div>
                   </div>
                 </div>
@@ -810,11 +808,8 @@
                     </div>
                     <div class="mt-auto border-top">
                       <h5 class="card-title lh-1 text-center">13.000 đ</h5>
-                      <a
-                        href="../giohang.html"
-                        class="btn btn-primary d-block p-0"
-                        >Mua Ngay</a
-                      >
+                      <input type="number" name="soluong" min="1" max="10" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
                     </div>
                   </div>
                 </div>
@@ -843,11 +838,8 @@
                     </div>
                     <div class="mt-auto border-top">
                       <h5 class="card-title lh-1 text-center">280.000 đ</h5>
-                      <a
-                        href="../giohang.html"
-                        class="btn btn-primary d-block p-0"
-                        >Mua Ngay</a
-                      >
+                      <input type="number" name="soluong" min="1" max="10" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
                     </div>
                   </div>
                 </div>
@@ -876,11 +868,8 @@
                     </div>
                     <div class="mt-auto border-top">
                       <h5 class="card-title lh-1 text-center">220.000 đ</h5>
-                      <a
-                        href="../giohang.html"
-                        class="btn btn-primary d-block p-0"
-                        >Mua Ngay</a
-                      >
+                      <input type="number" name="soluong" min="1" max="10" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
                     </div>
                   </div>
                 </div>
@@ -909,11 +898,8 @@
                     </div>
                     <div class="mt-auto border-top">
                       <h5 class="card-title lh-1 text-center">50.000 đ</h5>
-                      <a
-                        href="../giohang.html"
-                        class="btn btn-primary d-block p-0"
-                        >Mua Ngay</a
-                      >
+                      <input type="number" name="soluong" min="1" max="10" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
                     </div>
                   </div>
                 </div>
@@ -942,11 +928,8 @@
                     </div>
                     <div class="mt-auto border-top">
                       <h5 class="card-title lh-1 text-center">47.000 đ</h5>
-                      <a
-                        href="../giohang.html"
-                        class="btn btn-primary d-block p-0"
-                        >Mua Ngay</a
-                      >
+                      <input type="number" name="soluong" min="1" max="10" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
                     </div>
                   </div>
                 </div>
@@ -976,11 +959,8 @@
                     </div>
                     <div class="mt-auto border-top">
                       <h5 class="card-title lh-1 text-center">120.000 đ</h5>
-                      <a
-                        href="../giohang.html"
-                        class="btn btn-primary d-block p-0"
-                        >Mua Ngay</a
-                      >
+                      <input type="number" name="soluong" min="1" max="10" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
                     </div>
                   </div>
                 </div>
@@ -1009,11 +989,8 @@
                     </div>
                     <div class="mt-auto border-top">
                       <h5 class="card-title lh-1 text-center">125.000 đ</h5>
-                      <a
-                        href="../giohang.html"
-                        class="btn btn-primary d-block p-0"
-                        >Mua Ngay</a
-                      >
+                      <input type="number" name="soluong" min="1" max="10" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
                     </div>
                   </div>
                 </div>
@@ -1282,5 +1259,6 @@
         >
       </div>
     </div>
+    <script src="java.js"></script>
   </body>
 </html>
